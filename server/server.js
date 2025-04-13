@@ -6,9 +6,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors({
-    origin: "https://lucasrenandev.vercel.app/"
-}));
+app.use(cors());
 app.use(express.json());
 
 app.post("/contact-form", async (req, res) => {
@@ -34,6 +32,7 @@ app.post("/contact-form", async (req, res) => {
         res.status(200).json({sucess: true, message: "Sucesso ao enviar e-mail!"});
     }
     catch(error) {
+        console.error(error);
         res.status(500).json({sucess: false, message: "Erro ao enviar e-mail"});
     }
 });
