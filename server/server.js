@@ -1,16 +1,15 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(cors({
+    origin: "https://lucasrenandev.vercel.app/"
+}));
 app.use(express.json());
-
 
 app.post("/contact-form", async (req, res) => {
     const { name, email, tel, message } = req.body;
@@ -37,10 +36,6 @@ app.post("/contact-form", async (req, res) => {
     catch(error) {
         res.status(500).json({sucess: false, message: "Erro ao enviar e-mail"});
     }
-});
-
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
