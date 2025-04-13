@@ -21,7 +21,9 @@ export default function HeaderComponent() {
 
     useEffect(() => {
         const handleScroll = () => {
-            headerRef.current.classList.toggle("sticky", window.scrollY > 0);
+            if(headerRef) {
+                headerRef.current.classList.toggle("sticky", window.scrollY > 0);
+            }
             navRef.current.classList.remove("open");
             setMenuIcon(<FaBars/>);
         }
