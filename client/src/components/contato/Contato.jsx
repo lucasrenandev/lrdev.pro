@@ -71,7 +71,7 @@ export default function ContactComponent() {
                             <Input type="tel" 
                             name="tel" 
                             id="tel" 
-                            pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$"
+                            pattern="^\(?\d{2}\)?[ -]?\d{4,5}-?\d{4}$"
                             placeholder="(11) 91234-5678"
                             autoComplete="off" 
                             onChange={handleChange} required/>
