@@ -23,7 +23,7 @@ export default function ContactComponent() {
         event.preventDefault();
 
         try {
-            await Axios.post(`${import.meta.env.VITE_API_URL}/contact-form`, formData);
+            await Axios.post(`${import.meta.env.VITE_API_URL}`, formData);
             setFadeOut(true);
             setTimeout(() => {
                 navigate("/agradecimento");
