@@ -38,13 +38,13 @@ export default function PortfolioComponent() {
                     </Box>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="600">
-                    <Box role="group" aria-labelledby="modelo-site-viajens">
+                    <Box role="group" aria-labelledby="modelo-site-floricultura">
                         <ImgBox>
-                            <Img src={Img3} alt="Site de viajens"/>
+                            <Img src={Img3} alt="Site de floricultura"/>
                         </ImgBox>
                         <TextContent>
-                            <H3 id="modelo-site-viajens">Site de Viajens</H3>
-                            <Paragraph>Modelo de site para agência de viagens.</Paragraph>
+                            <H3 id="modelo-site-floricultura">Site de floricultura</H3>
+                            <Paragraph>Modelo de site de floricultura com um layout delicado e intuitivo.</Paragraph>
                         </TextContent>
                     </Box>
                 </div>
