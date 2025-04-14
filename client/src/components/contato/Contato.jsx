@@ -14,6 +14,7 @@ export default function ContactComponent() {
     });
     const navigate = useNavigate();
     const [fadeOut, setFadeOut] = useState(false);
+    const [isSeding, setIsSeding] = useState(false);
 
     const handleChange = (event) => {
         setFormData({...formData, [event.target.name]: event.target.value});
@@ -23,13 +24,16 @@ export default function ContactComponent() {
         event.preventDefault();
 
         try {
+            setIsSeding(true);
             await Axios.post(`${import.meta.env.VITE_API_URL}/contact-form`, formData);
             setFadeOut(true);
             setTimeout(() => {
                 navigate("/agradecimento");
             }, 600);
+            setIsSeding(false);
         }
         catch(error) {
+            setIsSeding(false);
             console.error("Error: ", error);
         }
     };
@@ -72,7 +76,7 @@ export default function ContactComponent() {
                             name="tel" 
                             id="tel" 
                             pattern="\(?\d{2}\)?\s?\d{4,5}-\d{4}"
-                            placeholder="(11) 91234-5678"
+                            placeholder="11 91234-5678"
                             autoComplete="off" 
                             onChange={handleChange} required/>
                         </InputField>
@@ -84,7 +88,9 @@ export default function ContactComponent() {
                             onChange={handleChange} required></TextArea>
                         </InputField>
                         <div className="button-box" data-aos="zoom-in" data-aos-delay="1000">
-                            <button type="submit" className="button">Enviar</button>
+                            <button type="submit" className="button" disabled={isSeding}>
+                                {isSeding ? "Enviando..." : "Enviar"}
+                            </button>
                         </div>
                     </ContactForm>
                 </ContactContent>

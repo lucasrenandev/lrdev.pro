@@ -47,7 +47,7 @@ export const Nav = styled.nav`
         height: 100vh;
         height: 100dvh;
         background-color:#283355;
-        padding: 8rem 0;
+        padding: 10rem 0;
         transition: right 0.35s ease-out;
     
         &.open {
@@ -65,7 +65,7 @@ export const NavList = styled.ul`
         align-items: center;
     }
     @media (max-width: 500px) {
-        gap: 3.5rem;
+        gap: 4rem;
     }
 `
 export const List = styled.li`
@@ -103,7 +103,7 @@ export const Link = styled.a`
     }
     @media (max-width: 978px) {
         color: var(--text);
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 500;
     }
 `
