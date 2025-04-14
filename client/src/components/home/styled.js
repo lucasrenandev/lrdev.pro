@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Home = styled.section`
+    height: 100vh;
     height: 100dvh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -10,15 +11,14 @@ export const Home = styled.section`
     @media (max-width: 978px) {
         height: 100%;
         grid-template-columns: 1fr;
-        gap: 0;
         text-align: center;
+        gap: 0;
     }
 `
 export const Main = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     @media (max-width: 978px) {
         align-items: center;
     }
@@ -27,12 +27,11 @@ export const LeftSide = styled.div`
     max-width: 600px;
     width: 100%;
     height: auto;
-
     @media (max-width: 978px) {
         max-width: 100%;
         width: 100%;
         height: auto;
-        padding-top: 7rem;
+        padding-top: 6rem;
     }
 `
 export const Text = styled.p`
@@ -40,7 +39,6 @@ export const Text = styled.p`
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 0.25px;
-
     @media (max-width: 500px) {
         font-size: 1.4rem;
     }
@@ -51,11 +49,9 @@ export const H1 = styled.h1`
     font-weight: 700;
     line-height: 1;
     margin: 1rem 0;
-    
     span {
         color: var(--contrast);
     }
-
     @media (max-width: 500px) {
         line-height: 1.2;
     }
@@ -79,7 +75,6 @@ export const Img = styled.img`
     width: 100%;
     height: auto;
     pointer-events: none;
-
     @media (max-width: 1320px) {
         max-width: 450px;
         width: 100%;

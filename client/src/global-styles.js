@@ -22,11 +22,10 @@ export const GlobalStyles = createGlobalStyle`
         --h1-font: 8rem;
         --h2-font: 5rem;
         --p-font: 1.8rem;
-
         @media (max-width: 1320px) {
             --h1-font: 6rem;
             --h2-font: 4rem;
-            --p-font: 1.6rem;
+            --p-font: 1.7rem;
         }
         @media (max-width: 500px) {
             --h1-font: 4rem;
@@ -57,6 +56,10 @@ export const GlobalStyles = createGlobalStyle`
         color: var(--text);
     }
 
+    html, body {
+        overflow-x: hidden;
+    }
+
     section {
         width: 100%;
         height: auto;
@@ -64,9 +67,6 @@ export const GlobalStyles = createGlobalStyle`
         scroll-margin-top: 6rem;
         @media (max-width: 1320px) {
             padding: 5rem 2rem;
-        }
-        @media (max-width: 978px) {
-            padding: 4rem 2rem;
         }
     }
 
@@ -105,11 +105,15 @@ export const GlobalStyles = createGlobalStyle`
         font-size: var(--p-font);
         font-weight: 500;
         transition: all 0.35s ease-out;
-        
         &:hover {
             color: var(--contrast);
             box-shadow: inset 0 0 1.5rem var(--contrast), 0 0 1.5rem var(--contrast);
             scale: 1.1;
+        }
+        @media (max-width: 500px) {
+            max-width: 160px;
+            width: 100%;
+            height: auto;
         }
     }
 

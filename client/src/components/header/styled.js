@@ -29,16 +29,13 @@ export const Logo = styled.a`
     transition: transform 0.35s ease-out;
 
     @media (max-width: 500px) {
-        ${Header}.sticky & {
-            transform: scale(0.85);
-        }
+        transform: scale(0.85);
     }   
 `
 export const Img = styled.img`
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover;
     pointer-events: none;
 `
 export const Nav = styled.nav`
@@ -46,10 +43,11 @@ export const Nav = styled.nav`
         position: absolute;
         top: 100%;
         right: -100%;
-        width: 28rem;
+        width: 26rem;
         height: 100vh;
-        background-color: var(--complement);
-        padding: 10rem 0;
+        height: 100dvh;
+        background-color:#283355;
+        padding: 8rem 0;
         transition: right 0.35s ease-out;
     
         &.open {
@@ -62,10 +60,12 @@ export const NavList = styled.ul`
     align-items: center;
     justify-content: center;
     gap: 3rem;
-
     @media (max-width: 978px) {
         flex-direction: column;
         align-items: center;
+    }
+    @media (max-width: 500px) {
+        gap: 3.5rem;
     }
 `
 export const List = styled.li`
@@ -81,7 +81,6 @@ export const Link = styled.a`
     &:hover, &.active {
         color: var(--contrast);
     }
-
     &::before {
         content: "";
         position: absolute;
@@ -102,10 +101,9 @@ export const Link = styled.a`
     &.active::before {
         transform: scaleX(1);
     }
-
     @media (max-width: 978px) {
-        color: var(--primary);
-        font-size: 2rem;
+        color: var(--text);
+        font-size: 2.2rem;
         font-weight: 500;
     }
 `
@@ -114,7 +112,6 @@ export const MenuIcon = styled.div`
     color: #fff;
     cursor: pointer;
     display: none;
-
     @media (max-width: 978px) {
         display: block;
     }
