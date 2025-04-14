@@ -8,19 +8,27 @@ export default function AboutComponent() {
                 <h2>Sobre mim</h2>
                 <p>Sou um desenvolvedor dedicado e atento aos detalhes, amo o que faço e estou empenhado a oferecer resultados de alta qualidade.</p>
             </div>
-            <AboutContent>
+            <AboutContent aria-label="Informações sobre mim">
                 <ImageBox data-aos="zoom-in" data-aos-delay="300">
                     <Img src={LogoImg} alt="Logo da seção sobre mim"/>
                 </ImageBox>
-                <Content data-aos="zoom-in" data-aos-delay="600">
-                    <H3>Informações</H3>
+                <Content role="region" 
+                aria-labelledby="sobre-informacoes"
+                data-aos="zoom-in" 
+                data-aos-delay="600">
+                    <H3 id="sobre-informacoes">Informações</H3>
                     <H4>Desenvolvedor Web Front-End</H4>
                     <Paragraph>
                         Sou Desenvolvedor Web Front-End especializado em criação sites modernos e responsivos. Meu foco é criar sites que não apenas sejam visualmente atraentes, mas também altamente funcionais, proporcionando aos usuários uma experiência fluida e intuitiva.
                     </Paragraph>
-                    <a href="https://wa.link/xb5tus" target="_blank" className="button">Contate-me</a>
+                    <a href="https://wa.link/xb5tus" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    role="button"
+                    aria-label="Link de contato do whatsapp"
+                    className="button">Contate-me</a>
                 </Content>
             </AboutContent>
         </About>
-    )
+    );
 }

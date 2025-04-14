@@ -14,22 +14,22 @@ export default function PortfolioComponent() {
                 <h2>Meus projetos</h2>
                 <p>Modelos de sites desenvolvidos focados em design responsivo, funcionalidade e boa experiência do usuário.</p>
             </div>
-            <PortfolioContent>
+            <PortfolioContent aria-label="Lista dos modelos de site oferecidos">
                 <div data-aos="zoom-in" data-aos-delay="200">
-                    <Box>
+                    <Box role="group" aria-labelledby="modelo-site-academia">
                         <ImgBox>
-                            <Img src={Img1} alt="Imagem de site de Acadêmia"/>
+                            <Img src={Img1} alt="Site de Acadêmia"/>
                         </ImgBox>
                         <TextContent>
-                            <H3>Site de Acadêmia</H3>
+                            <H3 id="modelo-site-academia">Site de Acadêmia</H3>
                             <Paragraph>Modelo de landing page moderna para academias.</Paragraph>
                         </TextContent>
                     </Box>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="400">
-                    <Box>
+                    <Box role="group" aria-labelledby="modelo-site-academia">
                         <ImgBox>
-                            <Img src={Img2} alt="Imagem de site de Portfólio"/>
+                            <Img src={Img2} alt="Site de Portfólio"/>
                         </ImgBox>
                         <TextContent>
                             <H3>Site de Portfólio</H3>
@@ -38,50 +38,50 @@ export default function PortfolioComponent() {
                     </Box>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="600">
-                    <Box>
+                    <Box role="group" aria-labelledby="modelo-site-viajens">
                         <ImgBox>
-                            <Img src={Img3} alt="Imagem de site de viajens"/>
+                            <Img src={Img3} alt="Site de viajens"/>
                         </ImgBox>
                         <TextContent>
-                            <H3>Site de Viajens</H3>
+                            <H3 id="modelo-site-viajens">Site de Viajens</H3>
                             <Paragraph>Modelo de site para agência de viagens.</Paragraph>
                         </TextContent>
                     </Box>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="800">
-                    <Box>
+                    <Box role="group" aria-labelledby="modelo-site-dentista">
                         <ImgBox>
-                            <Img src={Img4} alt="Imagem de site de dentista"/>
+                            <Img src={Img4} alt="Site de dentista"/>
                         </ImgBox>
                         <TextContent>
-                            <H3>Site de Dentista</H3>
+                            <H3 id="modelo-site-dentista">Site de Dentista</H3>
                             <Paragraph>Modelo de site elegante e confiável para consultórios odontológicos.</Paragraph>
                         </TextContent>
                     </Box>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="1000">
-                    <Box>
+                    <Box role="group" aria-labelledby="modelo-site-portfolio">
                         <ImgBox>
-                            <Img src={Img5} alt="Imagem de site de Portfólio"/>
+                            <Img src={Img5} alt="Site de Portfólio"/>
                         </ImgBox>
                         <TextContent>
-                            <H3>Site de Portfólio</H3>
+                            <H3 id="modelo-site-portfolio">Site de Portfólio</H3>
                             <Paragraph>Modelo de portfólio pessoal para profissionais criativos.</Paragraph>
                         </TextContent>
                     </Box>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="1200">
-                    <Box>
+                    <Box role="group" aria-labelledby="modelo-site-pizzaria">
                         <ImgBox>
-                            <Img src={Img6} alt="Imagem de site de pizzaria"/>
+                            <Img src={Img6} alt="Site de pizzaria"/>
                         </ImgBox>
                         <TextContent>
-                            <H3>Site de Pizzaria</H3>
+                            <H3 id="modelo-site-pizzaria">Site de Pizzaria</H3>
                             <Paragraph>Modelo site para pizzarias ou restaurantes.</Paragraph>
                         </TextContent>
                     </Box>
                 </div>
             </PortfolioContent>
         </Portfolio>
-    )
+    );
 }

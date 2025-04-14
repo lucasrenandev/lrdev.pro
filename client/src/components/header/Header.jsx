@@ -46,7 +46,14 @@ export default function HeaderComponent() {
             });
             navLinks.forEach((link) => {
                 const href = link.getAttribute("href");
-                link.classList.toggle("active", href === `#${currentId}`);
+                const isActive = href === `#${currentId}`;
+                link.classList.toggle("active", isActive);
+                if(isActive) {
+                    link.setAttribute("aria-current", "page");
+                }
+                else{
+                    link.removeAttribute("aria-current");
+                }
             });
         };
 
@@ -64,7 +71,10 @@ export default function HeaderComponent() {
             <Logo href="/">
                 <Img src={LogoImg} alt="Logo"/>
             </Logo>
-            <Nav ref={navRef} role="navigation" aria-label="Navegação principal">
+            <Nav ref={navRef} 
+            role="navigation" 
+            aria-label="Navegação principal"
+            aria-expanded={navRef.current?.classList.contains("open") ? "true" : "false"}>
                 <NavList>
                     <List><Link href="#home">Home</Link>
                     </List>
@@ -78,7 +88,11 @@ export default function HeaderComponent() {
                     </List>
                 </NavList>
             </Nav>
-            <MenuIcon onClick={toggleMenu}>
+            <MenuIcon onClick={toggleMenu} 
+            role="button" 
+            aria-label={navRef.current?.classList.contains("open") ? "Fechar menu" : "Abrir menu"}
+            tabIndex={0}
+            onKeyDown={(e) => (e.key === "Enter" || e.key === "") && toggleMenu()}>
                 {menuIcon}
             </MenuIcon>
         </Header>

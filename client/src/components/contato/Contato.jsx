@@ -50,7 +50,7 @@ export default function ContactComponent() {
                 transition={{duration: 0.6}}
             >
                 <ContactContent>
-                    <ContactForm onSubmit={handleSubmit}>
+                    <ContactForm role="form" onSubmit={handleSubmit}>
                         <InputField data-aos="zoom-in" data-aos-delay="200">
                             <Label htmlFor="name">Nome</Label>
                             <Input type="text" 
@@ -59,7 +59,8 @@ export default function ContactComponent() {
                             pattern="[A-Za-zÀ-ÿ\s]+"
                             placeholder="Seu nome" 
                             autoComplete="off"
-                            onChange={handleChange} required/>
+                            onChange={handleChange} 
+                            required/>
                         </InputField>
                         <InputField data-aos="zoom-in" data-aos-delay="400">
                             <Label htmlFor="email">E-mail</Label>
@@ -68,7 +69,8 @@ export default function ContactComponent() {
                             id="email" 
                             placeholder="email@gmail.com" 
                             autoComplete="off"
-                            onChange={handleChange} required/>
+                            onChange={handleChange} 
+                            required/>
                         </InputField>
                         <InputField data-aos="zoom-in" data-aos-delay="600">
                             <Label htmlFor="tel">Telefone</Label>
@@ -78,17 +80,20 @@ export default function ContactComponent() {
                             pattern="\(?\d{2}\)?\s?\d{4,5}-\d{4}"
                             placeholder="11 91234-5678"
                             autoComplete="off" 
-                            onChange={handleChange} required/>
+                            onChange={handleChange} 
+                            required/>
                         </InputField>
                         <InputField data-aos="zoom-in" data-aos-delay="800">
                             <Label htmlFor="message">Mensagem</Label>
                             <TextArea name="message" 
                             id="message" 
                             placeholder="Descrição do projeto" 
-                            onChange={handleChange} required></TextArea>
+                            onChange={handleChange} 
+                            required></TextArea>
                         </InputField>
                         <div className="button-box" data-aos="zoom-in" data-aos-delay="1000">
-                            <button type="submit" className="button" disabled={isSeding}>
+                            <button type="submit" aria-label="Enviar formulário" 
+                            className="button" disabled={isSeding}>
                                 {isSeding ? "Enviando..." : "Enviar"}
                             </button>
                         </div>

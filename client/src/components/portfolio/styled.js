@@ -14,7 +14,7 @@ export const PortfolioContent = styled.div`
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 `
-export const Box = styled.div`
+export const Box = styled.section`
     display: flex;
     flex-direction: column;
     height: 100%;

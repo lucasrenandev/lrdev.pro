@@ -14,7 +14,7 @@ export const ServicesContent = styled.div`
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 `
-export const Box = styled.div`
+export const Box = styled.section`
     height: 100%;
     border: 0.2rem solid var(--contrast);
     border-radius: 2rem;

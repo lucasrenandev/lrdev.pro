@@ -13,7 +13,12 @@ export default function HomeComponent() {
                         Desenvolvedor Web Front-End especializado em criação de sites modernos e responsivos.
                     </Paragraph>
                 </LeftSide>
-                <a href="https://wa.link/xb5tus" target="_blank" className="button">Contate-me</a>
+                <a href="https://wa.link/xb5tus" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                role="button"
+                aria-label="Link de contato do whatsapp" 
+                className="button">Contate-me</a>
             </Main>
             <RightSide data-aos="zoom-in" data-aos-delay="600">
                 <Figure>

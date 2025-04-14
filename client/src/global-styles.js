@@ -22,12 +22,16 @@ export const GlobalStyles = createGlobalStyle`
         --h1-font: 8rem;
         --h2-font: 5rem;
         --p-font: 1.8rem;
-        @media (max-width: 1320px) {
+    }
+    @media (max-width: 1320px) {
+        :root{
             --h1-font: 6rem;
             --h2-font: 4rem;
             --p-font: 1.7rem;
         }
-        @media (max-width: 500px) {
+    }
+    @media (max-width: 500px) {
+        :root{
             --h1-font: 4rem;
             --h2-font: 3rem;
             --p-font: 1.5rem;
@@ -117,6 +121,10 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
+    :focus-visible {
+        outline: 0.2rem dashed var(--contrast);
+        outline-offset: 0.4rem;
+    }
     ::selection {
         background-color: var(--complement);
     }

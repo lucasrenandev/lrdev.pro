@@ -49,7 +49,6 @@ export const Nav = styled.nav`
         background-color:#283355;
         padding: 10rem 0;
         transition: right 0.35s ease-out;
-    
         &.open {
             right: 0;
         }
@@ -97,13 +96,12 @@ export const Link = styled.a`
     &:hover::before {
         transform: scaleX(1);
     }
-
     &.active::before {
         transform: scaleX(1);
     }
     @media (max-width: 978px) {
         color: var(--text);
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         font-weight: 500;
     }
 `
@@ -114,5 +112,9 @@ export const MenuIcon = styled.div`
     display: none;
     @media (max-width: 978px) {
         display: block;
+    }
+    &:focus-visible {
+        outline: 0.2rem solid var(--contrast);
+        outline-offset: 0.4rem;
     }
 `
