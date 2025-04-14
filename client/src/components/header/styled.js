@@ -13,12 +13,10 @@ export const Header = styled.header`
     justify-content: space-between;
     padding: 0.5rem 5rem;
     transition: all 0.35s ease-out;
-        
     &.sticky {
         background-color: var(--secondary);
         box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.2);
     }
-    
     @media (max-width: 1320px) {
         padding: 0.5rem 2rem;
     }
@@ -27,7 +25,6 @@ export const Logo = styled.a`
     width: 80px;
     height: auto;
     transition: transform 0.35s ease-out;
-
     @media (max-width: 500px) {
         transform: scale(0.85);
     }   
@@ -58,7 +55,7 @@ export const NavList = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 3.5rem;
     @media (max-width: 978px) {
         flex-direction: column;
         align-items: center;

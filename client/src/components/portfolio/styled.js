@@ -9,7 +9,6 @@ export const PortfolioContent = styled.div`
     align-items: stretch;
     gap: 3rem;
     margin-top: 4rem;
-
     @media (max-width: 500px) {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -21,8 +20,7 @@ export const Box = styled.section`
     border: 0.2rem solid var(--contrast);
     border-radius: 2rem;
     padding: 1rem;
-    transition: transform 0.35s ease-out, box-shadow 0.35s ease-out;
-    
+    transition: all 0.35s ease-out;
     &:hover {
         box-shadow: 0 0 1rem var(--contrast);
         transform: scale(1.02);
@@ -47,10 +45,9 @@ export const H3 = styled.h3`
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
-    margin: 1.5rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
 `
 export const Paragraph = styled.p`
     font-size: var(--p-font);
     font-weight: 400;
-    line-height: 1.6;
 `

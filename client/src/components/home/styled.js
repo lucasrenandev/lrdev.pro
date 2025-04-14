@@ -48,7 +48,7 @@ export const H1 = styled.h1`
     font-size: var(--h1-font);
     font-weight: 700;
     line-height: 1;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     span {
         color: var(--contrast);
     }

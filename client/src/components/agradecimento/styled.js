@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Thanks = styled.section`
+    height: 100vh;
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -13,10 +14,9 @@ export const H2 = styled.h2`
     font-size: var(--h2-font);
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 `
 export const Paragraph = styled.p`
     font-size: var(--p-font);
     font-weight: 400;
-    line-height: 1.6;
 `

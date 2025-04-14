@@ -54,7 +54,7 @@ export const H3 = styled.h3`
     line-height: 1;
 `
 export const H4 = styled.h4`
-    margin: 1rem 0 2rem 0;
+    margin: 1.5rem 0 2rem 0;
     font-size: var(--p-font);
     font-weight: 400;
 `

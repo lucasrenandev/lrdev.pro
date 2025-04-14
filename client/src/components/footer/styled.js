@@ -8,8 +8,6 @@ export const Footer = styled.footer`
 export const Paragraph = styled.p`
     font-size: var(--p-font);
     font-weight: 400;
-    line-height: 1.6;
-
     span {
         display: inline-block;
     }

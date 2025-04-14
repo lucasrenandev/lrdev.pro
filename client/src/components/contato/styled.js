@@ -16,7 +16,6 @@ export const ContactForm = styled.form`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     .button-box {
         max-width: 180px;
         width: 100%;
@@ -55,7 +54,6 @@ export const Input = styled.input`
     font-weight: 400;
     color: var(--text);
     transition: all 0.35s ease-out;
-    
     &::placeholder {
         color: var(--complement);
     }
@@ -76,7 +74,6 @@ export const TextArea = styled.textarea`
     color: var(--text);
     resize: none;
     transition: 0.35s ease-out;
-
     &::placeholder {
         color: var(--complement);
     }

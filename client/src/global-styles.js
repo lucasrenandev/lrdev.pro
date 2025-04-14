@@ -62,15 +62,16 @@ export const GlobalStyles = createGlobalStyle`
 
     html, body {
         overflow-x: hidden;
+        line-height: 1.6;
     }
 
     section {
         width: 100%;
         height: auto;
-        padding: 6rem 10rem;
+        padding: 8rem 10rem;
         scroll-margin-top: 6rem;
         @media (max-width: 1320px) {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
         }
     }
 
@@ -86,12 +87,11 @@ export const GlobalStyles = createGlobalStyle`
         font-size: var(--h2-font);
         font-weight: 700;
         line-height: 1;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     .heading p {
         font-size: var(--p-font);
         font-weight: 400;
-        line-height: 1.6;
     }
 
     .button {
@@ -121,10 +121,6 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-    :focus-visible {
-        outline: 0.2rem dashed var(--contrast);
-        outline-offset: 0.4rem;
-    }
     ::selection {
         background-color: var(--complement);
     }

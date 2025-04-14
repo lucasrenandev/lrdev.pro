@@ -9,7 +9,6 @@ export const ServicesContent = styled.div`
     gap: 3rem;
     align-items: stretch;
     margin-top: 4rem;
-
     @media (max-width: 500px) {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -19,8 +18,7 @@ export const Box = styled.section`
     border: 0.2rem solid var(--contrast);
     border-radius: 2rem;
     padding: 2rem;
-    transition: transform 0.35s ease-out, box-shadow 0.35s ease-out;
-
+    transition: all 0.35s ease-out;
     &:hover {
         box-shadow: 0 0 1rem var(--contrast);
         transform: scale(1.02);
@@ -39,5 +37,4 @@ export const H3 = styled.h3`
 export const Paragraph = styled.p`
     font-size: var(--p-font);
     font-weight: 400;
-    line-height: 1.6;
 `
