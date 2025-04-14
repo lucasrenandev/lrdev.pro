@@ -11,21 +11,21 @@ export default function HeaderComponent() {
     const toggleMenu = () => {
         if(!navRef.current.classList.contains("open")) {
             navRef.current.classList.add("open");
-            setMenuIcon(<FaTimes/>)
+            setMenuIcon(<FaTimes/>);
         }
         else {
             navRef.current.classList.remove("open");
-            setMenuIcon(<FaBars/>)
+            setMenuIcon(<FaBars/>);
         }
     }
 
     useEffect(() => {
         const handleScroll = () => {
-            if(headerRef) {
+            if(headerRef.current) {
                 headerRef.current.classList.toggle("sticky", window.scrollY > 0);
+                navRef.current.classList.remove("open");
+                setMenuIcon(<FaBars/>);
             }
-            navRef.current.classList.remove("open");
-            setMenuIcon(<FaBars/>);
         }
         window.addEventListener("scroll", handleScroll);
 
