@@ -5,18 +5,19 @@ import { FaBars, FaTimes} from "react-icons/fa";
 
 export default function HeaderComponent() {
     const [menuIcon, setMenuIcon] = useState(<FaBars/>);
+    const [menuOpen, setMenuOpen] = useState(false);
     const headerRef = useRef(null);
     const navRef = useRef(null);
 
     const toggleMenu = () => {
-        if(!navRef.current.classList.contains("open")) {
-            navRef.current.classList.add("open");
-            setMenuIcon(<FaTimes/>);
-        }
-        else {
-            navRef.current.classList.remove("open");
-            setMenuIcon(<FaBars/>);
-        }
+        setMenuOpen((prev) => {
+            const newState = !prev;
+            if(navRef.current) {
+                navRef.current.classList.toggle("open", newState);
+            }
+            setMenuIcon(newState ? <FaTimes/> : <FaBars/>);
+            return newState;
+        });
     }
 
     useEffect(() => {
@@ -25,14 +26,11 @@ export default function HeaderComponent() {
                 headerRef.current.classList.toggle("sticky", window.scrollY > 0);
                 navRef.current.classList.remove("open");
                 setMenuIcon(<FaBars/>);
+                setMenuOpen(false);
             }
-        }
-        window.addEventListener("scroll", handleScroll);
-
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll("nav a");
-
-        const scrollSpy = () => {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll("nav a");
+    
             let scrollY = window.pageYOffset;
             let currentId = "";
 
@@ -55,14 +53,12 @@ export default function HeaderComponent() {
                     link.removeAttribute("aria-current");
                 }
             });
-        };
-
-        window.addEventListener("scroll", scrollSpy);
-        scrollSpy();
+        }
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("scroll", scrollSpy);
         }
     }, []);
 
@@ -74,7 +70,7 @@ export default function HeaderComponent() {
             <Nav ref={navRef} 
             role="navigation" 
             aria-label="Navegação principal"
-            aria-expanded={navRef.current?.classList.contains("open") ? "true" : "false"}>
+            aria-expanded={menuOpen}>
                 <NavList>
                     <List><Link href="#home">Home</Link>
                     </List>
@@ -90,7 +86,7 @@ export default function HeaderComponent() {
             </Nav>
             <MenuIcon onClick={toggleMenu} 
             role="button" 
-            aria-label={navRef.current?.classList.contains("open") ? "Fechar menu" : "Abrir menu"}
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             tabIndex={0}
             onKeyDown={(e) => (e.key === "Enter" || e.key === "") && toggleMenu()}>
                 {menuIcon}

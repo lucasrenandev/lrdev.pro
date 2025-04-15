@@ -59,7 +59,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: var(--primary);
         color: var(--text);
     }
-
+    
     html, body {
         overflow-x: hidden;
         line-height: 1.6;
@@ -72,6 +72,9 @@ export const GlobalStyles = createGlobalStyle`
         scroll-margin-top: 6rem;
         @media (max-width: 1320px) {
             padding: 6rem 2rem;
+        }
+        @media (max-width: 500px) {
+            padding: 4rem 2rem;
         }
     }
 

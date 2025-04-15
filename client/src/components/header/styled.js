@@ -5,20 +5,20 @@ export const Header = styled.header`
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 8rem;
     background-color: transparent;
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 5rem;
+    padding: 0 5rem;
     transition: all 0.35s ease-out;
     &.sticky {
         background-color: var(--secondary);
         box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.2);
     }
     @media (max-width: 1320px) {
-        padding: 0.5rem 2rem;
+        padding: 0 2rem;
     }
 `
 export const Logo = styled.a`
@@ -109,9 +109,5 @@ export const MenuIcon = styled.div`
     display: none;
     @media (max-width: 978px) {
         display: block;
-    }
-    &:focus-visible {
-        outline: 0.2rem solid var(--contrast);
-        outline-offset: 0.4rem;
     }
 `
