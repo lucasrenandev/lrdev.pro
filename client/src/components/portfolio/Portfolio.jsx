@@ -1,11 +1,11 @@
 import { Portfolio, PortfolioContent, Box, ImgBox, Img,
 TextContent, H3, Paragraph } from "./styled";
-import Img1 from "../../assets/img1.png";
-import Img2 from "../../assets/img2.png";
-import Img3 from "../../assets/img3.png";
-import Img4 from "../../assets/img4.png";
-import Img5 from "../../assets/img5.png";
-import Img6 from "../../assets/img6.png";
+import Img1 from "../../assets/img1.jpg";
+import Img2 from "../../assets/img2.jpg";
+import Img3 from "../../assets/img3.jpg";
+import Img4 from "../../assets/img4.jpg";
+import Img5 from "../../assets/img5.jpg";
+import Img6 from "../../assets/img6.jpg";
 
 export default function PortfolioComponent() {
     return(

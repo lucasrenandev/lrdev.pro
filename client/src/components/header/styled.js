@@ -43,7 +43,7 @@ export const Nav = styled.nav`
         width: 26rem;
         height: 100vh;
         height: 100dvh;
-        background-color:#283355;
+        background-color: #1c2541;
         padding: 10rem 0;
         transition: right 0.35s ease-out;
         &.open {
@@ -104,7 +104,7 @@ export const Link = styled.a`
 `
 export const MenuIcon = styled.div`
     font-size: 2.3rem;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     display: none;
     @media (max-width: 978px) {
