@@ -21,7 +21,7 @@ export default function PortfolioComponent() {
                             <Img src={Img1} alt="Site de Acadêmia"/>
                         </ImgBox>
                         <TextContent>
-                            <H3 id="modelo-site-academia">Site de Acadêmia</H3>
+                            <H3 id="modelo-site-academia">Site de Academia</H3>
                             <Paragraph>Modelo de landing page moderna para academias.</Paragraph>
                         </TextContent>
                     </Box>
